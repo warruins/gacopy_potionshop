@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIController : MonoBehaviour
+public class InterfaceController : MonoBehaviour
 {
     //public Button ledgerShowHide;
-    public Image ledgerWindow;
+    public Canvas ledgerWindow;
     private bool ledgerActive;
     // Start is called before the first frame update
     void Start()

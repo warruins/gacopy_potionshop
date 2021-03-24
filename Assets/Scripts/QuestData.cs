@@ -15,9 +15,9 @@ public class QuestData : ScriptableObject
     public int questID;
     
     [TextArea(15, 20)]
-    public string questDescription;
-    public string questObjective;
-    public int objQuantity;
+    public string description;
+    public string objective;
+    public int quantity;
 
     public bool isTimed;
     public int questTimer;

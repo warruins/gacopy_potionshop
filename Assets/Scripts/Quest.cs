@@ -14,19 +14,19 @@ public class Quest : MonoBehaviour
 
     public bool isAccepted;
     public bool isComplete;
-    [SerializeField]
-    private QuestData settings;
     
-
+    [SerializeField]
+    public QuestData settings;
+    
     public Text reward; // not sure what this is yet.
 
-    private void Awake()
+    private void Start()
     {
-        description.text = settings.questDescription;
-        objective = settings.questObjective;
-        objQuantity = settings.objQuantity;
+        description.text = settings.description;
+        objective = settings.objective;
+        objQuantity = settings.quantity;
     }
-    
+
     public void CheckProgress()
     {
         // TODO: Figure out how to use inventory here!

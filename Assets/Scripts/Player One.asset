@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Player One
   m_EditorClassIdentifier: 
   playerName: Susko
-  playerImg: {fileID: 0}
+  playerImg: {fileID: 21300000, guid: 8a06ac5b383b51e42a109cbe87d1ae06, type: 3}
   playerTitle: Master
   goldOwned: 10
   silverOwned: 10

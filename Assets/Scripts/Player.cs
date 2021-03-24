@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     [SerializeField] private PlayerData settings;
+    public SpriteRenderer renderer;
     public Text playerName;
     public Sprite sprite;
     private Inventory inventory;
@@ -17,21 +18,12 @@ public class Player : MonoBehaviour
     void Awake()
     {
         playerName.text = settings.name;
+        // TODO: Sprite not rendering. why?
         sprite = settings.playerImg;
+        renderer.sprite = sprite;
         inventory = settings.inventory;
         gold.text = settings.goldOwned.ToString();
         silver.text = settings.silverOwned.ToString();
         copper.text = settings.copperOwned.ToString();
-    }
-    
-    // Update is called once per frame
-    void Update()
-    {
-        QuestStatus();
-    }
-
-    void QuestStatus()
-    {
-        
     }
 }
