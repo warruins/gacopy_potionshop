@@ -28,7 +28,7 @@ public class Quest : MonoBehaviour
     private void Start()
     {
         icon.sprite = settings.icon;
-        description.text = settings.description;
+        description.text = settings.itemDescription;
         reward.text = $"{settings.rewardAmount} {settings.rewardType.ToString()}";
         rewardIcon.sprite = settings.rewardImg;
         objective = settings.objective;

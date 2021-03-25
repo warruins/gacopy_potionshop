@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da0a3fbadd1bc647b066aec312f79db, type: 3}
   m_Name: Winning Quest
   m_EditorClassIdentifier: 
+  itemId: --2eee5d15-23d7-433d-9a06-abf47bb9f77f
+  itemType: 
+  itemName: 
+  UID: 2eee5d15-23d7-433d-9a06-abf47bb9f77f
   questID: QUEST-Winning-Quest-12345
   description: In this quest you win no matter what. Have at it!
+  questTitle: 
   icon: {fileID: 21300000, guid: 75b57f38e6b8eb94781ffc0d5b8229af, type: 3}
   objective: Win
   quantity: 1

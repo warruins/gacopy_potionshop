@@ -85,7 +85,7 @@ public class QuestTracker : MonoBehaviour
         for (int i = 0; i < dQuestCount; i++)
         {
             var q = ScriptableObject.CreateInstance<QuestData>();
-            q.description = $"Quest {i} from the Quest Tracker.";
+            q.itemDescription = $"Quest {i} from the Quest Tracker.";
             AddQuest(q);
         }
     }

@@ -47,7 +47,7 @@ namespace Editor
         void CreateNewQuest(QuestData source)
         {
             QuestData quest = CreateInstance<QuestData>();
-            quest.description = description;
+            quest.itemDescription = description;
             quest.objective = objective;
             quest.quantity = objectiveQuantity;
             quest.rewardAmount = rewardAmount;

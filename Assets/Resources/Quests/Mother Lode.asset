@@ -10,17 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6da0a3fbadd1bc647b066aec312f79db, type: 3}
-  m_Name: Life is Good
+  m_Name: Mother Lode
   m_EditorClassIdentifier: 
-  questID: QUEST-Life-Is-Good-12345
-  description: Easy quest
-  icon: {fileID: 21300000, guid: 70c07282b802b2e4d967053555733ba2, type: 3}
-  objective: Live
-  quantity: 1
+  itemId: Quest-Mother-Lode-b66e38e7-9a26-47d0-a535-d1e46dd007e5
+  itemType: Quest
+  itemName: Mother Lode
+  questID: 
+  description: Create a potion that produces a new plant when poured on dirt.
+  questTitle: Mother Lode
+  icon: {fileID: 0}
+  objective: Motherly Potion
+  quantity: 12
   isTimed: 0
   questTimer: 0
   isActive: 0
   isComplete: 0
-  rewardAmount: 100
-  rewardImg: {fileID: 21300000, guid: 55348d23907204348802ab90f62f5e6a, type: 3}
+  rewardAmount: 6000
+  rewardImg: {fileID: 0}
   rewardType: 0

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6da0a3fbadd1bc647b066aec312f79db, type: 3}
+  m_Name: Quest-Mother-Lode-f4a3a65f-5772-48a5-8472-694308cdb6a6
+  m_EditorClassIdentifier: 
+  itemId: Quest-Mother-Lode-f4a3a65f-5772-48a5-8472-694308cdb6a6
+  itemType: Quest
+  itemName: Mother Lode
+  itemDescription: "The farmers need flowers that \ngrow themselves. Ive told them
+    \nits a nonsense idea, but Im sure\nyou can figure it out.\n\nFind a potion that
+    grows a new\nplant when poured into the dirt."
+  icon: {fileID: 0}
+  questID: Quest-Mother-Lode-f4a3a65f-5772-48a5-8472-694308cdb6a6
+  questTitle: Mother Lode
+  objective: Motherly Potion
+  quantity: 1
+  isTimed: 0
+  questTimer: 0
+  isActive: 0
+  isComplete: 0
+  rewardAmount: 200
+  rewardImg: {fileID: 21300000, guid: c3ef36b25bfd5b14b924ee1e26274f53, type: 3}
+  rewardType: 0

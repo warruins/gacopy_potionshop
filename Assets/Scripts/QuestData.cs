@@ -1,9 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "new Quest", menuName = "Game Systems/Quests")]
-public class QuestData : ScriptableObject
+public class QuestData : GameItem
 {
     public enum RewardType
     {
@@ -11,13 +13,13 @@ public class QuestData : ScriptableObject
         Reputation,
         Reagent
     }
-
-    public string questID;
+    [ReadOnlyField] public string questID;
     
-    [TextArea(15, 20)]
-    public string description;
+    // [TextArea(15, 20)]
+    // public string itemDescription;
+    public string questTitle;
 
-    public Sprite icon;
+    // public Sprite icon;
     public string objective;
     public int quantity;
 
