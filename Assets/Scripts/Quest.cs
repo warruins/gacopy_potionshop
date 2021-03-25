@@ -8,6 +8,9 @@ public class Quest : MonoBehaviour
 {
     public Image icon;
     public Text description;
+    public Text reward; // not sure what this is yet.
+    public String rewardAmount;
+    public Image rewardIcon;
     public String objective;
     public int objQuantity;
     private Inventory inventory;
@@ -18,11 +21,11 @@ public class Quest : MonoBehaviour
     [SerializeField]
     public QuestData settings;
     
-    public Text reward; // not sure what this is yet.
-
     private void Start()
     {
         description.text = settings.description;
+        reward.text = settings.rewardType.ToString();
+        rewardIcon.sprite = settings.rewardImg;
         objective = settings.objective;
         objQuantity = settings.quantity;
     }

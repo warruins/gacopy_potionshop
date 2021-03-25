@@ -6,24 +6,29 @@ using UnityEngine;
 [Serializable]
 public class QuestTracker : MonoBehaviour
 {
+    /**
+     * Keeps track of ALL quests, not just active ones. A resource for adding
+     * dynamic gameplay.
+     */
     [SerializeField]
     private List<QuestData> quests;
 
+    public bool debug;
+    public int dQuestCount;
     private void Awake()
     {
         quests = new List<QuestData>();
-        
     }
 
     private void Start()
     {
-        // var q = ScriptableObject.CreateInstance<QuestData>();
-        // q.description = "A quest from the Quest Tracker.";
-        // AddQuest(q);
-        var allQuests = Resources.LoadAll<QuestData>("Quests");
-        foreach (var quest in allQuests)
+        if (debug)
         {
-            AddQuest(quest);
+            LoadDebugData();
+        }
+        else
+        {
+            LoadQuests();
         }
     }
 
@@ -35,6 +40,11 @@ public class QuestTracker : MonoBehaviour
         }
     }
 
+    void GetCurrentQuests()
+    {
+        var playerQuests = PlayerPrefs.GetString("CurrentQuests");
+    }
+    
     public void AddQuest(QuestData quest)
     {
         Enqueue(quest);
@@ -60,6 +70,25 @@ public class QuestTracker : MonoBehaviour
         Dequeue();
     }
 
+    private void LoadQuests()
+    {
+        var allQuests = Resources.LoadAll<QuestData>("Quests");
+        foreach (var quest in allQuests)
+        {
+            AddQuest(quest);
+        }
+    }
+
+    private void LoadDebugData()
+    {
+        for (int i = 0; i < dQuestCount; i++)
+        {
+            var q = ScriptableObject.CreateInstance<QuestData>();
+            q.description = $"Quest {i} from the Quest Tracker.";
+            AddQuest(q);
+        }
+    }
+    
     public QuestData CurrentQuest() => Peek();
     public bool IsComplete() => CurrentQuest().isComplete;
     public bool IsEmpty() => quests.Count == 0;

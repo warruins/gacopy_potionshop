@@ -10,7 +10,11 @@ namespace Editor
         private string title;
         private string description;
         private string objective;
-        private int quantity;
+        private int objectiveQuantity;
+        private string reward;
+        private int rewardAmount;
+        private Sprite rewardImage;
+        
         public QuestData source;
 
         public override void OnInspectorGUI()
@@ -33,6 +37,23 @@ namespace Editor
                 // quantity = source.objQuantity;
                 tracker.AddQuest(source);
             }
+        }
+
+        void AddQuestToLedger()
+        {
+            
+        }
+
+        void CreateNewQuest(QuestData source)
+        {
+            QuestData quest = CreateInstance<QuestData>();
+            quest.description = description;
+            quest.objective = objective;
+            quest.quantity = objectiveQuantity;
+            quest.rewardAmount = rewardAmount;
+            quest.rewardImg = rewardImage;
+            AssetDatabase.CreateAsset(quest, "Assets/Resources/Quests/NewQuest.asset");
+            AssetDatabase.SaveAssets();
         }
     }
 }

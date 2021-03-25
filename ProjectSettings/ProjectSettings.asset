@@ -674,10 +674,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 9a1b95f4-92ad-43db-84a0-43b71d5cafc0
+  cloudProjectId: 
   framebufferDepthMemorylessMode: 0
-  projectName: GA303-Spring-2021
-  organizationId: artstuff-e1d445cd-4c44-43a1-bb41-288d01ffd9ac
+  projectName: 
+  organizationId: 
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

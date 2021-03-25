@@ -6,24 +6,20 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     [SerializeField] private PlayerData settings;
-    public SpriteRenderer renderer;
+    public SpriteRenderer spriteRenderer;
     public Text playerName;
     public Sprite sprite;
     private Inventory inventory;
 
     public Text gold;
-    public Text silver;
-    public Text copper;
 
-    void Awake()
+    void Start()
     {
         playerName.text = settings.name;
         // TODO: Sprite not rendering. why?
         sprite = settings.playerImg;
-        renderer.sprite = sprite;
+        spriteRenderer.sprite = sprite;
         inventory = settings.inventory;
         gold.text = settings.goldOwned.ToString();
-        silver.text = settings.silverOwned.ToString();
-        copper.text = settings.copperOwned.ToString();
     }
 }

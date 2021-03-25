@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,17 +8,43 @@ public class LedgerWindowController : MonoBehaviour
 {
     public QuestTracker tracker;
     public Canvas questContainer;
-    public float questHeight;
-
+    public Quest[] questContainers;
     public Transform ledgerPos;
-    // Start is called before the first frame update
+
     void Start()
     {
-        // TODO: Figure out how to get the "height" of prefab to add and adjust positions of newly added quests to the ledger.
-        // questHeight = questContainer.transform.position.y;
-        DisplayQuests();
+        questContainers = GetComponentsInChildren<Quest>();
+        GetQuests();
+        // Debug.Log("Container 1:", questContainers[0]);
     }
 
+    /**
+     * Get Quests
+     * Solves the problem of how to iterate over the list of possible quests and
+     * display them on the page. If we limit the Ledger to 3 quests, then we can use
+     * a static number of containers (3) and simply add the data into them one at a time.
+     * TODO: List accepted quests and new quests (currently lists all).
+     */
+    void GetQuests()
+    {
+        List<QuestData> trackerQuests = tracker.GetQuests();
+        for (int i = 0; i < questContainers.Length; i++)
+        {
+            var quest = trackerQuests[i];
+            questContainers[i].settings = quest;
+            // questContainers[i].description.text = quest.description;
+            // questContainers[i].description.text = quest.description;
+            // questContainers[i].reward.text = quest.rewardType.ToString();
+            // questContainers[i].rewardIcon.sprite = quest.rewardImg;
+        }
+    }
+
+    /**
+     * Display Quests
+     * Dynamically creates quest containers for each quest on the tracker. The Ledger
+     * would start empty and this method would add new containers.
+     * TODO: Positioning seems tricky for this. Long term goal.
+     */
     void DisplayQuests()
     {
         var quests = tracker.GetQuests();
