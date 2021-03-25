@@ -12,10 +12,12 @@ public class QuestData : ScriptableObject
         Reagent
     }
 
-    public int questID;
+    public string questID;
     
     [TextArea(15, 20)]
     public string description;
+
+    public Sprite icon;
     public string objective;
     public int quantity;
 

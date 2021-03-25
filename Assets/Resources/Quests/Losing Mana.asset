@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da0a3fbadd1bc647b066aec312f79db, type: 3}
   m_Name: Losing Mana
   m_EditorClassIdentifier: 
-  questID: 200
-  description: 
+  questID: QUEST-Losing-Mana-12345
+  description: Dont lose the mana!
+  icon: {fileID: 21300000, guid: 2732b68f9d214a94f82d025181b70ad9, type: 3}
   objective: 
   quantity: 0
   isTimed: 0
   questTimer: 0
-  isActive: 1
+  isActive: 0
   isComplete: 0
   rewardAmount: 100
-  rewardImg: {fileID: 0}
+  rewardImg: {fileID: 21300000, guid: 5999440158fe79049abf320312f63fe6, type: 3}
   rewardType: 0

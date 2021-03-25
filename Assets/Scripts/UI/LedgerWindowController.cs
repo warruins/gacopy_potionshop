@@ -32,13 +32,9 @@ public class LedgerWindowController : MonoBehaviour
         {
             var quest = trackerQuests[i];
             questContainers[i].settings = quest;
-            // questContainers[i].description.text = quest.description;
-            // questContainers[i].description.text = quest.description;
-            // questContainers[i].reward.text = quest.rewardType.ToString();
-            // questContainers[i].rewardIcon.sprite = quest.rewardImg;
         }
     }
-
+    
     /**
      * Display Quests
      * Dynamically creates quest containers for each quest on the tracker. The Ledger

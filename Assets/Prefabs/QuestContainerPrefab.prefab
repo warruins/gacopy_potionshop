@@ -118,7 +118,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6831010095658675051}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -5617030633635598591}
+        m_MethodName: AcceptQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5921607643473856050
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,16 +475,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4924d27e09faef54fba9ad7a9f330d5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  settings: {fileID: 0}
   icon: {fileID: 5921607645176985496}
+  rewardIcon: {fileID: 5921607643473856048}
   description: {fileID: 5921607643478716177}
   reward: {fileID: 5921607645188758558}
   rewardAmount: 
-  rewardIcon: {fileID: 0}
+  questButton: {fileID: 7958017622566653659}
+  buttonText: {fileID: 1263520284074816002}
+  inventory: {fileID: 0}
   objective: 
   objQuantity: 0
-  isAccepted: 0
-  isComplete: 0
-  settings: {fileID: 0}
+  accepted: 0
+  complete: 0
 --- !u!1 &5921607645176985498
 GameObject:
   m_ObjectHideFlags: 0

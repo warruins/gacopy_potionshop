@@ -13,6 +13,7 @@ public class QuestTracker : MonoBehaviour
     [SerializeField]
     private List<QuestData> quests;
 
+    [Header("Debug Options")]
     public bool debug;
     public int dQuestCount;
     private void Awake()

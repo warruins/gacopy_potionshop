@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerData : ScriptableObject
 {
     public string playerName;
-    public Sprite playerImg;
+    public Sprite sprite;
     public string playerTitle;
 
     public int goldOwned;

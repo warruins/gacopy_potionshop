@@ -6,28 +6,50 @@ using UnityEngine.UI;
 
 public class Quest : MonoBehaviour
 {
+    [Header("UI Settings")]
+    public QuestData settings;
     public Image icon;
+    public Image rewardIcon;
     public Text description;
     public Text reward; // not sure what this is yet.
     public String rewardAmount;
-    public Image rewardIcon;
+    public Button questButton;
+    public Text buttonText;
+    [SerializeField] private Inventory inventory; // TODO: this should live on the player or manager.
+    
+    [Header("Status")]
     public String objective;
     public int objQuantity;
-    private Inventory inventory;
-
-    public bool isAccepted;
-    public bool isComplete;
+    [SerializeField] private bool accepted;
+    [SerializeField] private bool complete;
     
-    [SerializeField]
-    public QuestData settings;
+    private Image buttonImage;
     
     private void Start()
     {
+        icon.sprite = settings.icon;
         description.text = settings.description;
-        reward.text = settings.rewardType.ToString();
+        reward.text = $"{settings.rewardAmount} {settings.rewardType.ToString()}";
         rewardIcon.sprite = settings.rewardImg;
         objective = settings.objective;
         objQuantity = settings.quantity;
+        buttonImage = questButton.GetComponent<Image>();
+    }
+
+    private void Update()
+    {
+        if (IsAccepted())
+        {
+            buttonText.text = "Deliver";
+            buttonImage.color = Color.green;
+            questButton.interactable = false;
+        }
+
+        if (IsComplete() && IsAccepted())
+        {
+            buttonText.text = "Deliver";
+            questButton.interactable = true;
+        }
     }
 
     public void CheckProgress()
@@ -38,10 +60,16 @@ public class Quest : MonoBehaviour
         // compare the count to the objective quantity
         if (item.storedQuantity >= objQuantity)
         {
-            isComplete = true;
+            complete = true;
         }
     }
 
-    public bool IsComplete() => isComplete;
+    public void AcceptQuest()
+    {
+        accepted = true;
+    }
+
+    public bool IsComplete() => complete;
+    public bool IsAccepted() => accepted;
 }
 

@@ -6,19 +6,17 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     [SerializeField] private PlayerData settings;
-    public SpriteRenderer spriteRenderer;
+    [SerializeField] private Inventory inventory;
+    public Image avatar;
     public Text playerName;
-    public Sprite sprite;
-    private Inventory inventory;
 
     public Text gold;
 
     void Start()
     {
-        playerName.text = settings.name;
-        // TODO: Sprite not rendering. why?
-        sprite = settings.playerImg;
-        spriteRenderer.sprite = sprite;
+        playerName.text = settings.playerName;
+        // TODO: Sprite not there visually but its being loaded on inspector. why?
+        avatar.sprite = settings.sprite;
         inventory = settings.inventory;
         gold.text = settings.goldOwned.ToString();
     }
