@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questID: QUEST-Winning-Quest-12345
   description: In this quest you win no matter what. Have at it!
-  icon: {fileID: 21300000, guid: cdf0e22ea6cc88b47a2d58c8a743608f, type: 3}
+  icon: {fileID: 21300000, guid: 75b57f38e6b8eb94781ffc0d5b8229af, type: 3}
   objective: Win
   quantity: 1
   isTimed: 0

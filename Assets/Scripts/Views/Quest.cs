@@ -41,6 +41,7 @@ public class Quest : MonoBehaviour
         if (IsAccepted())
         {
             buttonText.text = "Deliver";
+            buttonText.color = Color.white;
             buttonImage.color = Color.green;
             questButton.interactable = false;
         }
