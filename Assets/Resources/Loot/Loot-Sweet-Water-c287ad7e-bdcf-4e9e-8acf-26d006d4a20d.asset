@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e618407e5b287814aa2cce8ecdbfb3fd, type: 3}
+  m_Name: Loot-Sweet-Water-c287ad7e-bdcf-4e9e-8acf-26d006d4a20d
+  m_EditorClassIdentifier: 
+  itemId: Loot-Sweet-Water-c287ad7e-bdcf-4e9e-8acf-26d006d4a20d
+  itemName: Sweet Water
+  itemType: Loot
+  itemDescription: From the best river.
+  icon: {fileID: 21300000, guid: 128aed9036f15fc4086035b312bf30c5, type: 3}

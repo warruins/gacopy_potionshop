@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Quest-Motherly-Potion-2c8000e6-630a-4a10-a7a3-8dba100f6075
   m_EditorClassIdentifier: 
   itemId: Quest-Motherly-Potion-2c8000e6-630a-4a10-a7a3-8dba100f6075
-  itemType: Quest
   itemName: Motherly Potion
+  itemType: Loot
   itemDescription: Add to barren dirt and new plants will grow!
   icon: {fileID: 21300000, guid: 161dee9aeb89b454b8dd0b69dd9a7ab4, type: 3}
